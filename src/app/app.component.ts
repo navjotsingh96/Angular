@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
 
   images = ['header_new.jpg', '2.jpg', 'pexels-andrea-piacquadio-3764580.jpg'];
   currentImage = 0;
+  showImage = true;
 
 
   ngOnInit() {
@@ -17,8 +18,14 @@ export class AppComponent implements OnInit {
 
   uploadImage() {
     setInterval(() => {
-      this.currentImage = this.currentImage % this.images.length;
       this.currentImage++;
+      this.currentImage = this.currentImage % this.images.length;
+      this.showImage = false;
+
+
+      setTimeout(() => {
+        this.showImage = true;
+      }, 10);
     },8000);
   }
 }
