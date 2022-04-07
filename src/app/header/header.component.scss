@@ -1,0 +1,18 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba($color: #fff, $alpha: 0.3);
+    img {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    a {
+        margin: 0 20px 0 20px;
+    }
+}
