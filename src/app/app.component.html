@@ -1,13 +1,4 @@
-<div class="image-container">
-
-    <!--In Angular  wird {{images[currentImage]}} als variable hier benutzt. Dann brauchen wir keine document.getbyId..... in JS.
-    
-    *ngif ist wie if else frage in disemFall wenn Showimage true und dannach flase-->
-    <img *ngIf="showImage" class="img-slideshow" src="assets/img/{{images[currentImage]}}">
-</div>
-<div class="image-container slide-show">
-    <!--*ngif ist wie if else frage in disemFall wenn Showimage true und dannach flase-->
-    <p *ngIf="showImage" class="fadeIn">
-        {{ headlines[currentImage] }}
-    </p>
-</div>
+<!--ist ein Angular component code sauber zu halten und wenn eine große App gibt dann kann man z.B.<app-header> uzw. hier binden.
+in index wird app-component gebunden, in app-component ist app-slideshow uzw. gebunden.
+neu app-component zu setllen einfach in Terminal = ng g c component-name(slideshow)-->
+<app-slideshow></app-slideshow>
