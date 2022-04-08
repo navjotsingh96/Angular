@@ -1,7 +1,10 @@
-<header>
-    <img routerLink="/" src="assets/img/computer-64.png">
+<!--[class.headerDark] ist gleich wie class="headerDark" aber wird so gechrieben damit wenn darkmode true ist nur dann verwendet wird-->
+<header [class.headerDark]="darkmode">
+    <!--*ngIf if else frage ! wenn dark mode nicht ture ist-->
+    <img *ngIf="!darkmode" routerLink="/" src="assets/img/computer-white.gif">
+    <img *ngIf="darkmode" routerLink="/" src="assets/img/computer-black.png">
 
-    <div>
+    <div [class.darkMode]="darkmode">
         <a routerLink="/">Home</a>
         <a href="#">Curriculum</a>
         <a href="#">Projects</a>
