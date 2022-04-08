@@ -5,4 +5,9 @@ neu app-component zu setllen einfach in Terminal = ng g c component-name(slidesh
 <!----------[darkmode] wird in einer Syntax geschrieben, damit wir es als false setzen können-->
 <!----------router.url checkt if  url / ist dann darmode false wenn path oder url anders ist dann true-->
 <app-header [darkmode]="router.url !== '/'"></app-header>
-<router-outlet></router-outlet>
+
+<!----------router.url checkt if  url / nict ist dann container class wird verwendet sonst nicht-->
+
+<div [class.container]="router.url !== '/'">
+    <router-outlet></router-outlet>
+</div>
