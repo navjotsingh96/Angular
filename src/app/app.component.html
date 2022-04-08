@@ -3,5 +3,6 @@ in index wird app-component gebunden, in app-component ist app-slideshow uzw. ge
 neu app-component zu setllen einfach in Terminal = ng g c component-name(slideshow)-->
 
 <!----------[darkmode] wird in einer Syntax geschrieben, damit wir es als false setzen können-->
-<app-header [darkmode]="false"></app-header>
+<!----------router.url checkt if  url / ist dann darmode false wenn path oder url anders ist dann true-->
+<app-header [darkmode]="router.url !== '/'"></app-header>
 <router-outlet></router-outlet>
